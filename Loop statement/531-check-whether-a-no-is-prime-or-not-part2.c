@@ -1,10 +1,8 @@
 #include<stdio.h>
 #include<conio.h>
 void main()
-{  int s,e,count=0;
-printf("Enter Start and End:-");
-scanf("%d %d",&s,&e);
-    for(int i=s;i<=e;i++)
+{  int count=0;
+    for(int i=2;i<=10;i++)
     {
         for(int j=1;j<=i;j++)
         {
