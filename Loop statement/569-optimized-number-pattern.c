@@ -13,7 +13,7 @@ void main()
             {
                 printf(" ");
             }
-            else
+            else//
             {
                 printf("%d",no+1-j);
             }
