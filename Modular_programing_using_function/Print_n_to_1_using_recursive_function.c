@@ -13,4 +13,5 @@ void main()
     printf("Enter number:- ");
     scanf("%d",&no);
     m1(no);
+getch();
 }
