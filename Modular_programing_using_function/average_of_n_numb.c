@@ -12,6 +12,7 @@ scanf("%d",&no);
 for(int i=0;i<no;i++)
 {
     scanf("%d",&numb);
+    int totall();
     int k=totall(numb,res);
             res=k;
 }
@@ -24,10 +25,3 @@ int totall(int no,int res)
  res=res+no;
 return res;
 }
-/*
-float avg(int res,int no)
-{
-float resk=(float)res/no;
-return resk;
-}
-*/
