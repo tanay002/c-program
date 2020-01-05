@@ -7,8 +7,6 @@ void m1(int n)
     {
          m1(n-1);
     }
-    
-   
 }
 void main()
 { int no;

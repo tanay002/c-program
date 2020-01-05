@@ -1,9 +1,10 @@
 #include<stdio.h>
 #include<conio.h>
+int facto();
 void main()
 {
     int no,r;
-printf("Enter no and r: ");
+printf("Enter no and r Note:(n>r):- ");
 scanf("%d %d",&no,&r);
 int res=facto(no);
 int r1=facto(r);

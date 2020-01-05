@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<conio.h>
+int fact();
 void main()
 {
     int no;
