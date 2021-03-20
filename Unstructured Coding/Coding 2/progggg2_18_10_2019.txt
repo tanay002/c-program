@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main()
+{ int count=0;
+   long int arr[5];
+   long int great=0,small=0;
+   long int sum1=0,sum2=0;
+   int comp=0;
+for(int i=0;i<5;i++)
+{
+  scanf("%ld",&arr[i]);
+}
+small=arr[0];
+great=arr[0];
+comp=arr[0];
+for(int i=1;i<5;i++)
+{
+ if(arr[i]<small)
+     small=arr[i];
+ 
+ if(arr[i]>great)
+     great=arr[i];
+
+ if(arr[i]==comp)
+count++;    
+
+}
+for(int i=0;i<5;i++)
+{
+    if(arr[i]!=great)
+    {
+        sum2=sum2+arr[i];
+    }
+    
+    if(arr[i]!=small)
+    {
+        sum1=sum1+arr[i];
+    }
+}
+if(count!=4)
+printf("%ld %ld",sum2,sum1);
+else
+printf("%d %d",comp*4,comp*4);
+}
