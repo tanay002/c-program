@@ -1,0 +1,46 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Main {
+
+    public static void main(String[] args)
+     {   int count=0;
+         String s1="";
+         char s2;
+           String s3="";
+           String s4="";
+         int no;
+         int sizek;
+         String b[];
+         Scanner sc=new Scanner(System.in);
+         no=sc.nextInt();
+        for(int i=1;i<=no;i++)
+         {
+             s1=sc.next();
+             sizek=s1.length();
+          while(count<sizek)
+          { 
+              if(count%2==0)
+            {
+             s2=s1.charAt(count);
+             s3=s3+""+s2;
+            }
+            else
+            {
+                s2=s1.charAt(count);
+             s4=s4+""+s2;
+            }
+            count++;
+          }
+             System.out.println(s3+" "+s4);
+             count=0;
+             s3=""; s4="";
+         }
+
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+

@@ -1,0 +1,103 @@
+import java.util.*;
+public class Main
+{ 
+    int s=0;
+    int p_count=0;
+  static int prime[]=new int[100];
+     
+      public void akm(int i)
+        {   p_count++;
+            prime[s]=i;
+            s++;
+        }
+        
+        public void printk(int size,int A[],int B[],int k)
+        { 
+            if(prime[k-1]%2!=0)
+         {
+                  for(int i=0;i<size;i++)
+                     {
+                    if(B[i]>0)
+                    {
+                   System.out.println(B[i]);
+                   }
+                    }
+                 for(int i=size-1;i>=0;i--)
+                       {
+                      if(A[i]>0)
+                     {
+                   System.out.println(A[i]);
+                       }
+           }
+         }
+           else
+           {
+              for(int i=0;i<size;i++)
+                       {
+                      if(A[i]>0)
+                     {
+                   System.out.println(A[i]);
+                       } 
+               
+                     }
+           for(int i=0;i<size;i++)
+                     {
+                    if(B[i]>0)
+                    {
+                   System.out.println(B[i]);
+                   }
+                    }
+         }
+            
+        }
+        
+    public static void main(String[] args) 
+    { 
+        int size;
+    int k;
+      int arr[];
+        Main m=new Main();
+        int count=0;
+        Scanner sc=new Scanner(System.in);
+        size=sc.nextInt();
+        arr=new int[size];
+           k=sc.nextInt();
+           int A[]=new int[size];
+           int B[]=new int[size];
+        for(int i=0;i<size;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        
+        for(int i=2;i<=513;i++)
+         {
+           for(int j=1;j<=513;j++)
+           {
+             if(i%j==0)
+             {
+                count++;
+             }
+           }
+        if(count==2)
+         {  
+            m.akm(i);
+            count=0;
+         }
+        else
+            count=0; 
+     }
+       for(int i=0;i<size;i++)
+       { 
+           
+           if(arr[i]%prime[k-1]==0)
+           {
+               A[i]=arr[i];
+           }
+           else
+           {
+                B[i]=arr[i];
+           }
+       }
+   m.printk(size,A,B,k);       
+}
+}
